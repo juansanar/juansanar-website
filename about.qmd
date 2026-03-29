@@ -1,0 +1,7 @@
+---
+title: "About me"
+description: |
+  Juan... who?
+---
+
+Juan C. Sanchez-Arias is a MD/PhD with a passion for science communication and data science.
