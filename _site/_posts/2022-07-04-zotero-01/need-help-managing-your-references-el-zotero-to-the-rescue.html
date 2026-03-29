@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Juan C. Sanchez-Arias">
+<meta name="dcterms.date" content="2022-07-04">
+<meta name="description" content="In the Lands in Between bibliographies, select Zotero as your hero.">
 
-<title>Blog – juansanar</title>
+<title>Need help managing your references? “El Zotero” to the rescue! – juansanar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,81 +72,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<link href="../../site_libs/panelset-0.3.0/panelset.css" rel="stylesheet">
+<script src="../../site_libs/panelset-0.3.0/panelset.js"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="../../theme.css">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/icon.png" alt="" class="navbar-logo light-content">
-    <img src="./img/icon.png" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/icon.png" alt="" class="navbar-logo light-content">
+    <img src="../../img/icon.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">juansanar</span>
     </a>
   </div>
@@ -156,19 +101,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -179,204 +124,127 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Q09MTkU=">COLNE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YSUyMHNjaWVuY2U=">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXNwYW5vbA==">Espanol <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UEtN">PKM <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dHV0b3JpYWw=">tutorial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V3JpdGluZw==">Writing <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#its-2022-use-a-reference-manager-ffs" id="toc-its-2022-use-a-reference-manager-ffs" class="nav-link active" data-scroll-target="#its-2022-use-a-reference-manager-ffs">It’s 2022! Use a reference manager ffs</a></li>
+  <li><a href="#how-to-choose-your-reference-manager" id="toc-how-to-choose-your-reference-manager" class="nav-link" data-scroll-target="#how-to-choose-your-reference-manager">How to choose your reference manager?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Need help managing your references? “El Zotero” to the rescue!</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">PKM</div>
+    <div class="quarto-category">Research</div>
+    <div class="quarto-category">Writing</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>In the Lands in Between bibliographies, select Zotero as your hero.</p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://www.juansanar.com/">Juan C. Sanchez-Arias</a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 4, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmVzZWFyY2glMkNFc3Bhbm9sJTJDQ09MTkU=" data-listing-date-sort="1658732400000" data-listing-file-modified-sort="1774821324939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
-<div class="thumbnail"><a href="./_posts/2022-07-25-colne-content-01/sharing-is-caring-s02e01-colne-lecture-on-calcium-imaging.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./_posts/2022-07-25-colne-content-01/sharing-is-caring-s02e01-colne-lecture-on-calcium-imaging.html" class="no-external">Sharing is caring S02E01: COLNE Lecture on Calcium Imaging</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXNwYW5vbA=='); return false;">Espanol</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q09MTkU='); return false;">COLNE</div>
+<section id="its-2022-use-a-reference-manager-ffs" class="level2">
+<h2 class="anchored" data-anchor-id="its-2022-use-a-reference-manager-ffs">It’s 2022! Use a reference manager ffs</h2>
+<p>The tradition of passing information to one generation another one has allowed us to use knowledge to our advantage (TODO REF). However, successfully achieving this requires the ability to track down the origins of such knowledge and related observations, opinions, etc. by adding small notes about them within our writing (TODO REF) as references or footnotes. In the past, this was done manually of course (and you’ll be surprised how many people still follow this ice age practice) and with the development of technology (e.g., personal computers, text processing software, etc), this labour intensive task can be somewhat automated (you still need to gather the information and make sense of it of course, though AI is taking major leaps in this regard).</p>
+<p>Another challenge that accumulating knowledge brings is managing the sheer amount of content. I wrote a small tidbit about the advantages of using a personal knowledge management tool. In this post, I will focus on managing references, specifically, I will try to convince you should use a reference manager for:</p>
+<ul>
+<li>Organizing your information sources (e.g., articles, books chapters, dissertations, newspapers, etc).</li>
+<li>Inserting and formatting citations into your text editor of preference (e.g., MS Word, LibreOffice, Google Docs, Zettlr, VS Code).</li>
+<li>Creating and formatting a bibliography.</li>
+</ul>
+<p><strong>So how do we deal with all this information?</strong> Specialized software such as reference managers are fundamental aids when citing knowledge in our writing, especially within the ivory walls of academia, where we (“we” as the academic collective through history) have created rules and style formats for this purpose, to the point that almost every single scholarly journal produces a format that best suites their copyediting and styling.</p>
+</section>
+<section id="how-to-choose-your-reference-manager" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-choose-your-reference-manager">How to choose your reference manager?</h2>
+<p>When it comes to choosing any piece of software, I like to use the following criteria to guide my decision:</p>
+<ul>
+<li>Is it FOSS (<strong>F</strong>ree <strong>O</strong>pen <strong>S</strong>ource <strong>S</strong>oftware)?
+<ul>
+<li>I gravitate towards FOSS because it means I can see how the application works, but also I can contribute to it and take advantage of others contributions (which tend to come in amazing plugins and customization options). Also, who doesn’t like free stuff?</li>
+</ul></li>
+<li>Does it have a community backing up or supporting the application?
+<ul>
+<li>This is really important because it makes troubleshooting bugs a breeze and not an insurmountable headache.</li>
+</ul></li>
+<li>Does it support multiple operating systems and multiple document writing software? In other words: does it work on macOS, MS Windows, and Linux? Does it work with MS Word, Google Docs, LibreOffice, and others (e.g., VS Code, Zettlr)?
+<ul>
+<li>As someone that uses all of these 3 operating systems (macOS for work and MS Windows and Linux for personal use) and multiple writing applications (primairly MS Word, Google Docs, and VS Code), this is a critical point.</li>
+</ul></li>
+</ul>
+<p>In my case, Zotero check all the boxes and beyond, and it has been and continues to be my primary recommendation in the internet (e.g., <a href="https://www.reddit.com/r/bioinformatics/comments/vcs95u/comment/icgmr9h/?utm_source=share&amp;utm_medium=web2x&amp;context=3">here</a>, <a href="https://www.reddit.com/r/academia/comments/txjo0p/comment/i3m4pod/?utm_source=share&amp;utm_medium=web2x&amp;context=3">here</a>, <a href="https://twitter.com/juan_sanar/status/1082454881531842560?s=20&amp;t=wd1vwP0KEX2yXQx_Dr-5Uw">here</a>, <a href="https://www.reddit.com/r/academia/comments/mao33p/comment/gru8g0r/?utm_source=share&amp;utm_medium=web2x&amp;context=3">here</a>, <a href="https://www.reddit.com/r/PhD/comments/js4z40/comment/gbyjs61/?utm_source=share&amp;utm_medium=web2x&amp;context=3">here</a>, and so on).</p>
+<p>You get my point, I love Zotero, advocate for Zotero, and no I am NOT sponsored by Zotero but I have immensley benefited from its flexibility and cross-platform compatbility. However, in the interest of experimentation, I’ll briefly summarize the major names in the reference manager game (at least from what I’ve learned from reading and talking to primarily other folks in academia - there’s another way to manage your reference if you’re also a fan of plain text like me, but that’s for another day-)</p>
+<div class="cell">
+<div class="cell-output-display">
 
 </div>
-<div class="delink listing-description"><a href="./_posts/2022-07-25-colne-content-01/sharing-is-caring-s02e01-colne-lecture-on-calcium-imaging.html" class="no-external">
-<p>Slide deck from my lecture on Neuroscience Methods (Tertulia Metodologica) for the Colegio Colombiano de Neurociencias (COLNE).</p>
-</a></div>
 </div>
-<div class="metadata">
-<a href="./_posts/2022-07-25-colne-content-01/sharing-is-caring-s02e01-colne-lecture-on-calcium-imaging.html" class="no-external">
-<div class="listing-date">
-Jul 25, 2022
+<div class="panelset">
+<section id="zotero" class="level3 panel-name panel">
+<h3 class="panel-name anchored" data-anchor-id="zotero">Zotero</h3>
+<p><a href="https://www.zotero.org/">Zotero</a> is a free and open source. They market themselves as an “easy-to-use tool to help you collect, organize, annotate, cite, and share research”. Their browser extension is blazing fast (probably the fastest out there) and is compatible with scientific articles as well as other sources of information, such as blogs, visual media (YouTube, Vimeo, etc.), and news article. Also, Zotero can save your library proxies, making your literature search way easier when off-campus or working from home without using an institutional VPN (hooray for mobility and flexibility!.</p>
+<p>One the biggest <em>pros</em> of using Zotero is their community, which is always happy to help troubleshoot through bugs or issues but also contribute to the improvement of Zotero’s platform from its core or by creating plugins that skyrocket your productivity (for example, ZotFile and BetterBibTex).</p>
+<p>You can use Zotero without an account; however this will impede synchronization across devices. That said, signing up to Zotero is a breeze, they don’t spam their user base and once signed up, you don’t have to do it again, it’ll remember you.</p>
+<p>Compatible with several document and text editors (MS Office Word, LibreOffice, Google Docs, Zettlr, VS Code, and the list go on).</p>
+</section>
+<section id="mendeley" class="level3 panel-name panel">
+<h3 class="panel-name anchored" data-anchor-id="mendeley">Mendeley</h3>
+<p><a href="https://www.mendeley.com/">Mendeley</a> started as free independent reference manager but was lately acquired by Elsevier, the multibillion publisher (although it continues to be free to use. Mendeley also has a browser extension, to which you have to sign in every time you want to use (a bit of pain in my humble opinion) and is disappointingly slow, even when trying to clip journal articles from Elsevier (you would expect it would work faster within their site). While there no community led plugins, Mendeley offers a mostly hassle free experience if you’re willing to wait relatively large amounts of time to clip a journal article and constantly having to sign into their browser extension.</p>
+<p>Expect to get loads of email (from which you can opt out of course) from them suggesting you papers sccording to your library and recent visits to Elsevier owned journals (talk about bias and telemetry, eh?).</p>
+<p>Compatible with MS Office Word and LibreOffice.</p>
+</section>
+<section id="endnote" class="level3 panel-name panel">
+<h3 class="panel-name anchored" data-anchor-id="endnote">EndNote</h3>
+<p><a href="https://endnote.com/">Endnote</a> is probably that old, unskilled, and not very nice person asking to join the sport game you and youre friends are enjoying. Gained a lot of traction in earlier days, partly because it was the only option available, making its away across academics (which more often than not are not very flexible or not as open to adapt newer, better, more transparent software). Because of this, it has a decent following, but it certainly lacks the community support and flexibility from free and open source software and it is not free. To compound this, you have to pay each time they upgrade their software, which is pretty much a must otherwise the compatibility with popular document editors will be gone.</p>
+<p>Compatible with MS Office Word and LibreOffice</p>
+</section>
+<section id="paperpile" class="level3 panel-name panel">
+<h3 class="panel-name anchored" data-anchor-id="paperpile">Paperpile</h3>
+<p>Never used it, but <a href="https://paperpile.com/features/">Paperpile</a> advocates swear by its ability to handle .pdf files and annotations. It also integrates with Google Docs, in addition to MS Office.</p>
+</section>
 </div>
-<div class="listing-author">
-Juan C. Sanchez-Arias
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UEtNJTJDUmVzZWFyY2glMkNXcml0aW5n" data-listing-date-sort="1656918000000" data-listing-file-modified-sort="1733118672009" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1088">
-<div class="thumbnail"><a href="./_posts/2022-07-04-zotero-01/need-help-managing-your-references-el-zotero-to-the-rescue.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./_posts/2022-07-04-zotero-01/need-help-managing-your-references-el-zotero-to-the-rescue.html" class="no-external">Need help managing your references? “El Zotero” to the rescue!</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V3JpdGluZw=='); return false;">Writing</div>
-
-</div>
-<div class="delink listing-description"><a href="./_posts/2022-07-04-zotero-01/need-help-managing-your-references-el-zotero-to-the-rescue.html" class="no-external">
-<p>In the Lands in Between bibliographies, select Zotero as your hero.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./_posts/2022-07-04-zotero-01/need-help-managing-your-references-el-zotero-to-the-rescue.html" class="no-external">
-<div class="listing-date">
-Jul 4, 2022
-</div>
-<div class="listing-author">
-Juan C. Sanchez-Arias
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UEtNJTJDUg==" data-listing-date-sort="1649142000000" data-listing-file-modified-sort="1774821324939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
-<div class="thumbnail"><a href="./_posts/2022-04-05-got-528-tab-problems/got-528-tab-problems.html" class="no-external">
-
-<p class="card-img-top"><img src="_posts/2022-04-05-got-528-tab-problems/img/2022-03-28-22-28-54.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./_posts/2022-04-05-got-528-tab-problems/got-528-tab-problems.html" class="no-external">Got 528 tab problems</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="delink listing-description"><a href="./_posts/2022-04-05-got-528-tab-problems/got-528-tab-problems.html" class="no-external">
-<p>but defeat ain’t one.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./_posts/2022-04-05-got-528-tab-problems/got-528-tab-problems.html" class="no-external">
-<div class="listing-date">
-Apr 5, 2022
-</div>
-<div class="listing-author">
-Juan C. Sanchez-Arias
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UiUyQ2RhdGElMjBzY2llbmNlJTJDdHV0b3JpYWw=" data-listing-date-sort="1643875200000" data-listing-file-modified-sort="1774821324938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="211">
-<div class="thumbnail"><a href="./_posts/2022-02-03-introducing-r-to-teammates/introducing-r-to-teammates.html" class="no-external">
-
-<p class="card-img-top"><img src="_posts/2022-02-03-introducing-r-to-teammates/img/therproject-website.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./_posts/2022-02-03-introducing-r-to-teammates/introducing-r-to-teammates.html" class="no-external">IntRoducing R to your team - Part 01</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMHNjaWVuY2U='); return false;">data science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dHV0b3JpYWw='); return false;">tutorial</div>
-
-</div>
-<div class="delink listing-description"><a href="./_posts/2022-02-03-introducing-r-to-teammates/introducing-r-to-teammates.html" class="no-external">
-<p>Friends don’t let friends pay licenses for stats software.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./_posts/2022-02-03-introducing-r-to-teammates/introducing-r-to-teammates.html" class="no-external">
-<div class="listing-date">
-Feb 3, 2022
-</div>
-<div class="listing-author">
-Juan C. Sanchez-Arias
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1636182000000" data-listing-file-modified-sort="1733118672023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="297">
-<div class="thumbnail"><a href="./_posts/welcome/welcome.html" class="no-external">
-
-<p class="card-img-top"><img src="_posts/welcome/img/old-website_small.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./_posts/welcome/welcome.html" class="no-external">New, skills, new site, same Juan</a>
-</h3>
-<div class="delink listing-description"><a href="./_posts/welcome/welcome.html" class="no-external">
-<p>Bye Hugo Academic, Hola distill!</p>
-<p>*The views in my personal website do not reflect those of my employer nor affiliations.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./_posts/welcome/welcome.html" class="no-external">
-<div class="listing-date">
-Nov 6, 2021
-</div>
-<div class="listing-author">
-Juan C. Sanchez-Arias
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
