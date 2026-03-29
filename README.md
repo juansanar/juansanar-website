@@ -1,2 +1,2 @@
-# juansanar-distill
-Personal website using distill
+# juansanar-distill --> Moved to qaurto.
+Personal website using ~distill~ quarto.
