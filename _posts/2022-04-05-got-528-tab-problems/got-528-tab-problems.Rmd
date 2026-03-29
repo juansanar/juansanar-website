@@ -14,26 +14,6 @@ categories:
   - R
 ---
 
-```{r metadata, message=FALSE, include=FALSE, echo=FALSE}
-library(metathis)
-meta() %>%
-  meta_description(
-    "Got 528 tab problems but defeat ain't one"
-  ) %>%
-  #meta_name("github-repo" = "jhelvy/jhelvy.com") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "Blog - Got 528 tab problems",
-    url = "https://www.juansanar.com/blog/2022-04-05-got-528-tab-problems",
-    image = "https://www.juansanar.com/posts/2022-04-05-got-528-tab-problems/img/wordcloud-1.png",
-    image_alt = "528 tabs in a single wordcloud",
-    og_type = "website",
-    og_author = c("Juan C. Sanchez-Arias"),
-    twitter_card_type = "summary",
-    twitter_creator = "@juan_sanar"
-  )
-```
-
 ```{css, echo=FALSE}
 .spoiler {
   visibility: hidden;

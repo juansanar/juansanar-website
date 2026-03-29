@@ -16,26 +16,6 @@ categories:
 preview: 'https://www.juansanar.com/posts/2022-07-25-colne-content-01/img/mit_geci_neurons.jpg'
 ---
 
-```{r metadata, message=FALSE, include=FALSE, echo=FALSE}
-library(metathis)
-meta() %>%
-  meta_description(
-    "Lecture on methods in neuroscience (calcium imaging) for the Colegio Colombiano de Neurociencias"
-  ) %>%
-  #meta_name("github-repo" = "jhelvy/jhelvy.com") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "Blog - COLNE Tertulia Metodologica S02E01",
-    url = "https://www.juansanar.com/posts/2022-07-25-colne-content-01",
-    image = "https://www.juansanar.com/posts/2022-07-25-colne-content-01/img/mit_geci_neurons.jpg",
-    image_alt = "Fluorescent cerebral cortex neurons expressing a genetically encoded calcium indicator. Source: MIT News",
-    og_type = "website",
-    og_author = c("Juan C. Sanchez-Arias"),
-    twitter_card_type = "summary",
-    twitter_creator = "@juan_sanar"
-  )
-```
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```

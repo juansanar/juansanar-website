@@ -19,7 +19,6 @@ categories:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(fontawesome)
-library(emo)
 ```
 
 # What is `r fa("r-project", fill = "steelblue")`?
@@ -44,6 +43,6 @@ There's quite a selection of software tools [available](https://en.wikipedia.org
 
 - Statistical forward programming language (made by statistician for statistics)
 
-- Great IDE integration (Hi there [RStudio!](https://www.rstudio.com/) `r emo::ji("smile")`)
+- Great IDE integration (Hi there [RStudio!](https://www.rstudio.com/) 😊)
 
 > Congratulation! You are now ready to embark your data journey. Ya`r fa("r-project", fill = "steelblue")`! 
