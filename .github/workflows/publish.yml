@@ -38,11 +38,6 @@ jobs:
             any::viridis
             any::circlize
             any::xaringanExtra
-            any::remotes
-
-      - name: Install emo from GitHub
-        run: |
-          Rscript -e "remotes::install_github('hadley/emo')"
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
