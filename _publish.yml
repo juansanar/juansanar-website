@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: "69c9a828-6526-1a00-0840-996e"
+      url: "https://juansanar-dsitll.netlify.app"
