@@ -28,6 +28,7 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
+            any::rmarkdown
             any::fontawesome
             any::readr
             any::dplyr
@@ -38,16 +39,9 @@ jobs:
             any::viridis
             any::circlize
             any::xaringanExtra
-            any::remotes
-
-      - name: Install emo from GitHub
-        run: |
-          Rscript -e "remotes::install_github('hadley/emo')"
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: netlify
-          QUARTO_PUBLISH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
