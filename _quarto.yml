@@ -4,8 +4,10 @@ project:
   render:
     - "*.qmd"
     - "_posts/"
-    - "cv.html"
-    - "resume.html"
+  resources:
+    - files/
+    - cv.html
+    - resume.html
 
 website:
   title: "juansanar"
