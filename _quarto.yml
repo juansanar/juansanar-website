@@ -32,4 +32,7 @@ format:
     css: theme.css
     toc: true
 
+execute:
+  freeze: auto
+
 editor: visual
