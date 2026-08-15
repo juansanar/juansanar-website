@@ -1,4 +1,4 @@
-# juansanar.me
+# juansanar.com
 
 Personal website and blog of **Juan C. Sanchez-Arias, MD, PhD** — Medical Doctor, Scientist, and Data Scientist.
 
