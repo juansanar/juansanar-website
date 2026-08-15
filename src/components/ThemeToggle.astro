@@ -1,7 +1,7 @@
 ---
 // ThemeToggle.astro
 ---
-<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+<button class="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode" type="button">
   <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="5"></circle>
     <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -56,11 +56,15 @@
 </style>
 
 <script is:inline>
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle?.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
+  if (!window.__themeListenerAdded) {
+    window.__themeListenerAdded = true;
+    document.addEventListener('click', (e) => {
+      const toggleBtn = e.target.closest('.theme-toggle');
+      if (!toggleBtn) return;
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 </script>
