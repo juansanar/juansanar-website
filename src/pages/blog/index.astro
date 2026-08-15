@@ -1,0 +1,147 @@
+---
+// blog/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout
+  title="Blog | Juan C. Sanchez-Arias, MD, PhD"
+  description="Thoughts, tutorials, and notes on data science, neuroscience, AI engineering, and research."
+>
+  <div class="blog-index">
+    <div class="blog-header">
+      <h1 class="page-title">Articles & Notes</h1>
+      <p class="page-desc">
+        Thoughts and tutorials exploring data science, AI engineering, research workflows, and tech.
+      </p>
+    </div>
+
+    <div class="posts-list">
+      {sortedPosts.map((post) => {
+        const formattedDate = new Intl.DateTimeFormat('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }).format(post.data.date);
+
+        return (
+          <article class="post-card card">
+            <div class="post-card-meta">
+              <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="post-card-tags">
+                  {post.data.tags.map((tag: string) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <h2 class="post-card-title">
+              <a href={`/blog/${post.id || post.slug}`}>
+                {post.data.title}
+              </a>
+            </h2>
+
+            {post.data.description && (
+              <p class="post-card-desc">{post.data.description}</p>
+            )}
+
+            <div class="post-card-footer">
+              <a href={`/blog/${post.id || post.slug}`} class="read-more">
+                Read Article &rarr;
+              </a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-index {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .page-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .page-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .post-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .post-card-tags {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+  }
+
+  .post-card-title {
+    margin: 0;
+    font-size: 1.35rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .post-card-title a {
+    color: var(--text-primary);
+  }
+
+  .post-card-title a:hover {
+    color: var(--accent);
+  }
+
+  .post-card-desc {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .post-card-footer {
+    margin-top: 0.5rem;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+</style>

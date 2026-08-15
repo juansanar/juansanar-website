@@ -1,0 +1,186 @@
+---
+// cv.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Curriculum Vitae & Resume | Juan C. Sanchez-Arias, MD, PhD"
+  description="Download the Curriculum Vitae and Resume of Juan C. Sanchez-Arias, MD, PhD."
+>
+  <div class="cv-page">
+    <div class="cv-header">
+      <div>
+        <h1 class="page-title">Curriculum Vitae & Resume</h1>
+        <p class="page-desc">
+          Official academic Curriculum Vitae and industry-focused Resume.
+        </p>
+      </div>
+
+      <div class="download-cards">
+        <div class="card download-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3>Academic Curriculum Vitae</h3>
+            <p>Comprehensive record of publications, awards, clinical training, and academic appointments.</p>
+          </div>
+          <div class="action-btn-group">
+            <a href="/files/juansanar_cv.pdf" target="_blank" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download CV (PDF)
+            </a>
+          </div>
+        </div>
+
+        <div class="card download-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>Industry Resume</h3>
+            <p>Focused overview of Data Science, AI-driven engineering, technical leadership, and industry impact.</p>
+          </div>
+          <div class="action-btn-group">
+            <a href="/files/juansanar_resume.pdf" target="_blank" class="btn btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF Viewer Section -->
+    <div class="viewer-section card">
+      <div class="viewer-header">
+        <h2>Embedded CV Preview</h2>
+        <a href="/files/juansanar_cv.pdf" target="_blank" class="btn btn-secondary btn-sm">Open in New Tab &nearr;</a>
+      </div>
+      <div class="iframe-wrap">
+        <iframe
+          src="/files/juansanar_cv.pdf#toolbar=0"
+          title="Juan C. Sanchez-Arias CV"
+          class="pdf-frame"
+        >
+          <p>Your browser does not support inline PDF viewing. <a href="/files/juansanar_cv.pdf">Click here to download the PDF</a>.</p>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .cv-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .page-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .page-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .download-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .download-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .download-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+  }
+
+  .download-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .action-btn-group {
+    margin-top: auto;
+    display: flex;
+  }
+
+  .viewer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .viewer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .viewer-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .iframe-wrap {
+    width: 100%;
+    height: 700px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .pdf-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+  }
+</style>

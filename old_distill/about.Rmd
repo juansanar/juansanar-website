@@ -1,9 +1,0 @@
----
-title: "About me"
-description: |
-  Juan... who?
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```

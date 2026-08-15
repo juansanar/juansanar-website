@@ -1,0 +1,253 @@
+---
+// Header.astro
+import ThemeToggle from './ThemeToggle.astro';
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "CV & Resume", href: "/cv" }
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="brand" aria-label="Juan C. Sanchez-Arias Home">
+      <img src="/img/icon-light.png" alt="Juan C. Sanchez-Arias Emblem" width="34" height="34" class="brand-logo logo-light" />
+      <img src="/img/icon-dark.png" alt="Juan C. Sanchez-Arias Emblem" width="34" height="34" class="brand-logo logo-dark" />
+      <div class="brand-text">
+        <span class="brand-name">juansanar<span class="brand-dot">.me</span></span>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main Navigation">
+      {navItems.map((item) => {
+        const isActive = item.href === "/" ? currentPath === "/" : currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            class={`nav-link ${isActive ? 'active' : ''}`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+      <div class="nav-divider"></div>
+      <ThemeToggle />
+    </nav>
+
+    <div class="mobile-actions">
+      <ThemeToggle />
+      <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-drawer" class="mobile-drawer">
+    <nav class="mobile-nav">
+      {navItems.map((item) => {
+        const isActive = item.href === "/" ? currentPath === "/" : currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            class={`mobile-nav-link ${isActive ? 'active' : ''}`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-surface-glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background-color var(--transition-normal), border-color var(--transition-normal);
+  }
+
+  .header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none !important;
+    color: var(--text-primary);
+  }
+
+  .brand-logo {
+    border-radius: var(--radius-sm);
+    transition: transform var(--transition-fast);
+  }
+
+  .logo-light {
+    display: block;
+  }
+
+  .logo-dark {
+    display: none;
+  }
+
+  :global([data-theme="dark"]) .logo-light {
+    display: none;
+  }
+
+  :global([data-theme="dark"]) .logo-dark {
+    display: block;
+  }
+
+  .brand:hover .brand-logo {
+    transform: scale(1.06);
+  }
+
+  .brand-name {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+  }
+
+  .brand-dot {
+    color: var(--accent-secondary);
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+    font-size: 0.925rem;
+    font-weight: 600;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    text-decoration: none !important;
+  }
+
+  .nav-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-surface-hover);
+  }
+
+  .nav-link.active {
+    color: var(--accent);
+    background-color: var(--accent-light);
+  }
+
+  .nav-divider {
+    width: 1px;
+    height: 1.25rem;
+    background-color: var(--border-strong);
+  }
+
+  .mobile-actions {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .mobile-toggle {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.4rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .mobile-drawer {
+    display: none;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .mobile-drawer.open {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mobile-nav-link {
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+
+  .mobile-nav-link:hover, .mobile-nav-link.active {
+    background-color: var(--accent-light);
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .desktop-nav {
+      display: none;
+    }
+    .mobile-actions {
+      display: flex;
+    }
+  }
+</style>
+
+<script is:inline>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+
+  mobileBtn?.addEventListener('click', () => {
+    const isOpen = mobileDrawer?.classList.toggle('open');
+    mobileBtn.setAttribute('aria-expanded', String(isOpen));
+    const hamburger = mobileBtn.querySelector('.hamburger-icon');
+    const close = mobileBtn.querySelector('.close-icon');
+    if (isOpen) {
+      if (hamburger) hamburger.style.display = 'none';
+      if (close) close.style.display = 'block';
+    } else {
+      if (hamburger) hamburger.style.display = 'block';
+      if (close) close.style.display = 'none';
+    }
+  });
+</script>

@@ -1,0 +1,61 @@
+---
+// Footer.astro
+import SocialLinks from './SocialLinks.astro';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <p class="copyright">
+        &copy; {currentYear} <strong>Juan C. Sanchez-Arias</strong>. Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
+      </p>
+      <p class="tagline">Medical Doctor &bull; Neuroscientist &bull; Data Scientist</p>
+    </div>
+    <SocialLinks />
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-surface);
+    padding: 2.5rem 1.5rem;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .copyright {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .tagline {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

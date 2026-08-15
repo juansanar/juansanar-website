@@ -1,28 +1,39 @@
-# juansanar.me (Personal Website)
+# juansanar.me
 
-Personal website and blog built with [Quarto](https://quarto.org/) and deployed to [Netlify](https://juansanar-dsitll.netlify.app).
+Personal website and blog of **Juan C. Sanchez-Arias, MD, PhD** — Medical Doctor, Scientist, and Data Scientist.
+
+Built with **[Astro 5](https://astro.build/)** and deployed automatically to Netlify via GitHub Actions.
 
 ---
 
-## 🚀 How to Update the Website
+## 🚀 Quick Start
 
-No Pull Requests or branches needed! All changes pushed directly to `main` are automatically published via GitHub Actions.
-
+### 1. Run Locally
 ```bash
-# 1. Make your changes in index.qmd, blog posts, etc.
+npm install
+npm run dev
+```
+Open [http://localhost:4321](http://localhost:4321) to preview your site.
 
-# 2. Commit and push directly to main
-git add .
-git commit -m "Description of changes"
-git push origin main
+### 2. Build for Production
+```bash
+npm run build
 ```
 
 ---
 
-## 🛠️ Local Preview (Optional)
+## ✍️ Updating Content
 
-To preview the website locally before pushing:
+- **Landing Page & Bio:** Edit [`src/pages/index.astro`](src/pages/index.astro).
+- **Blog Posts:** Add or edit Markdown (`.md`) files in [`src/content/blog/`](src/content/blog/).
+- **About Page:** Edit [`src/pages/about.astro`](src/pages/about.astro).
+- **CV & Resume:** Replace PDFs in [`public/files/`](public/files/).
+
+### 🚢 Deployment
+All pushes to `main` automatically build and deploy in **~15 seconds** via GitHub Actions.
 
 ```bash
-quarto preview
+git add .
+git commit -m "Your update message"
+git push origin main
 ```
