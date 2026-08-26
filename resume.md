@@ -25,18 +25,18 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 ### **BenchSci** | Toronto, ON (Remote)
 *Enterprise AI platform accelerating preclinical drug discovery for leading global pharmaceutical organizations.*
 
-#### **Data Scientist** | *Jan 2025 – Present*
+#### **Data Scientist** | *Jun 2026 – Present*
 - Architect production-grade Generative AI, RAG, and agentic workflows to extract, synthesize, and contextualize high-dimensional preclinical and therapeutics data for top global pharmaceutical clients.
 - Develop automated LLM benchmarking and evaluation pipelines to ensure high scientific accuracy, hallucination mitigation, and strict domain compliance across complex oncology and neuroscience indications.
 - Scale biomedical knowledge graph coverage and improve semantic vector search retrieval across millions of research papers, patents, and customer internal experimental records.
 
-#### **Science Tech Lead & Team Lead – Customer Therapeutics Data** | *Jul 2023 – Jan 2025*
+#### **Science Tech Lead & Team Lead** | *Jun 2023 – May 2026*
 - Managed and mentored a cross-functional team of PhD scientists and data specialists responsible for ingesting, validating, and structuring proprietary enterprise pharmaceutical datasets.
 - Served as **Product Owner (CSPO)** for the Customer Internal Data E2E processing pipeline, dramatically accelerating ingestion velocity and client time-to-value.
 - Led the R&D and deployment of Generative AI applications to extract, summarize, and structure unstructured experimental records in Electronic Lab Notebooks (ELNs) and IP documents.
 - Acted as subject matter expert for Neuroscience and Oncology therapeutic areas, shaping platform roadmap with executive stakeholders and technical product managers.
 
-#### **Scientist II – Customer Therapeutics Data** | *May 2022 – Jul 2023*
+#### **Scientist II** | *Jun 2022 – May 2023*
 - Engineered automated data ingestion and ontology mapping pipelines in Python/SQL for preclinical assays and biological reagents, reducing manual review cycles by over 30%.
 - Partnered directly with pharmaceutical partners to map bespoke scientific schemas to standardized knowledge graph ontologies.
 
