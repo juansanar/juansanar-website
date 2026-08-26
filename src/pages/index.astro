@@ -35,7 +35,7 @@ import EducationCard from '../components/EducationCard.astro';
       </div>
 
       <h1 class="hero-title">
-        Juan C. Sanchez-Arias <span class="pronouns">(he/him)</span>
+        Juan C. Sanchez-Arias <span class="pronouns">(he/him)</span> <span class="hero-flags" title="Colombian-Canadian" aria-label="Colombian and Canadian flags">🇨🇴 🇨🇦</span>
       </h1>
 
       <p class="hero-subtitle">
@@ -226,6 +226,21 @@ import EducationCard from '../components/EducationCard.astro';
     font-weight: 400;
     font-family: var(--font-sans);
     color: var(--text-muted);
+  }
+
+  .hero-flags {
+    display: inline-block;
+    font-size: 0.85em;
+    vertical-align: middle;
+    margin-left: 0.25rem;
+    letter-spacing: 0.12em;
+    user-select: none;
+    cursor: default;
+    transition: transform 0.2s ease;
+  }
+
+  .hero-flags:hover {
+    transform: scale(1.15);
   }
 
   .hero-subtitle {
