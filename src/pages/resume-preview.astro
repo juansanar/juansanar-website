@@ -1,0 +1,1108 @@
+---
+// src/pages/resume-preview.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Industry Resume Layout Previews | Juan C. Sanchez-Arias, MD, PhD"
+  description="Interactive visual preview comparison of candidate resume layouts tailored for HealthTech & Life Sciences Tech."
+>
+  <div class="preview-page">
+    <div class="preview-header">
+      <div class="preview-badge">✨ RESUME DESIGN LAB</div>
+      <h1 class="page-title">Industry Resume Previews</h1>
+      <p class="page-desc">
+        Compare the 3 visual presentation formats tailored for Life Sciences Tech & HealthTech leadership. Click the tabs below to switch layouts.
+      </p>
+
+      <!-- TAB CONTROLS -->
+      <div class="tab-controls">
+        <button class="tab-btn active" data-tab="v1">
+          <span class="tab-icon">📄</span>
+          <div>
+            <div class="tab-label">Version 1: Classic Minimalist</div>
+            <div class="tab-sub">Single-Column • ATS-Optimized</div>
+          </div>
+        </button>
+
+        <button class="tab-btn" data-tab="v2">
+          <span class="tab-icon">📊</span>
+          <div>
+            <div class="tab-label">Version 2: Executive Sidebar</div>
+            <div class="tab-sub">Two-Column • High-Density</div>
+          </div>
+        </button>
+
+        <button class="tab-btn" data-tab="v3">
+          <span class="tab-icon">⚡</span>
+          <div>
+            <div class="tab-label">Version 3: HealthTech Impact</div>
+            <div class="tab-sub">Bento Pillars • Domain Badges</div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- PREVIEW CONTAINERS -->
+    <div class="preview-viewport">
+      
+      <!-- VERSION 1 -->
+      <div id="tab-v1" class="tab-content active">
+        <div class="resume-paper v1-paper">
+          <div class="v1-header">
+            <h1 class="v1-name">JUAN C. SANCHEZ-ARIAS, MD, PhD</h1>
+            <div class="v1-title-tagline">Data Scientist • Physician-Scientist • HealthTech & AI Systems Leader</div>
+            <div class="v1-contact-bar">
+              <span>Victoria, BC, Canada</span>
+              <span>•</span>
+              <a href="mailto:jucamilo.sanchez@gmail.com">jucamilo.sanchez@gmail.com</a>
+              <span>•</span>
+              <a href="https://linkedin.com/in/juancsanchezarias/" target="_blank">linkedin.com/in/juancsanchezarias</a>
+              <span>•</span>
+              <a href="https://juansanar.com" target="_blank">juansanar.com</a>
+              <span>•</span>
+              <a href="https://github.com/juansanar" target="_blank">github.com/juansanar</a>
+            </div>
+          </div>
+
+          <div class="v1-section">
+            <div class="v1-section-title">Professional Profile</div>
+            <p class="v1-profile-text">
+              Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader with over 10 years of combined clinical, biomedical research, and healthtech industry experience. Specialized in engineering production-grade Generative AI pipelines, RAG architectures, and biomedical knowledge graphs that accelerate preclinical drug discovery and solve complex biological data problems. Proven track record leading cross-functional teams of PhD scientists and ML engineers, bridging clinical insights with modern data engineering to build compliant, scalable, and impactful AI products.
+            </p>
+          </div>
+
+          <div class="v1-section">
+            <div class="v1-section-title">Core Competencies & Technical Skills</div>
+            <div class="v1-skills-grid">
+              <div class="v1-skills-label">AI & LLM Systems:</div>
+              <div>Generative AI, Prompt Engineering, RAG Frameworks, LLM Evaluation & Benchmarking, Knowledge Graphs, Biomedical NLP.</div>
+
+              <div class="v1-skills-label">Programming & Data:</div>
+              <div>Python (pandas, NumPy, scikit-learn, PyTorch/HuggingFace), R (tidyverse, Bioconductor), SQL (PostgreSQL, BigQuery), Bash, Git.</div>
+
+              <div class="v1-skills-label">Life Sciences Domain:</div>
+              <div>Preclinical Drug Discovery, Clinical Medicine, Target Validation, Bio-Ontologies, Live-Cell Bio-Image Processing (ImageJ/Fiji), Computational Biology.</div>
+
+              <div class="v1-skills-label">Product & Leadership:</div>
+              <div>Product Ownership (CSPO), Cross-Functional Team Leadership, Agile/Scrum, Stakeholder Management, Scientific Due Diligence, GCP, Docker.</div>
+            </div>
+          </div>
+
+          <div class="v1-section">
+            <div class="v1-section-title">Work Experience</div>
+
+            <div class="v1-job-header">
+              <div><span class="v1-job-title">Data Scientist</span> — <span class="v1-company">BenchSci</span></div>
+              <span class="v1-job-date">Jan 2025 – Present | Remote (Toronto, ON)</span>
+            </div>
+            <ul class="v1-bullets">
+              <li>Architect production-grade Generative AI, RAG, and agentic workflows to extract, synthesize, and contextualize high-dimensional preclinical and therapeutics data for top global pharmaceutical clients.</li>
+              <li>Develop automated LLM benchmarking and evaluation pipelines to ensure high scientific accuracy, hallucination mitigation, and strict domain compliance across complex oncology and neuroscience indications.</li>
+              <li>Scale biomedical knowledge graph coverage and improve semantic vector search retrieval across millions of research papers, patents, and customer internal experimental records.</li>
+            </ul>
+
+            <div class="v1-job-header">
+              <div><span class="v1-job-title">Science Tech Lead & Team Lead</span> — <span class="v1-company">BenchSci</span></div>
+              <span class="v1-job-date">Jul 2023 – Jan 2025 | Remote (Toronto, ON)</span>
+            </div>
+            <ul class="v1-bullets">
+              <li>Managed and mentored a cross-functional team of PhD scientists and data specialists responsible for ingesting, validating, and structuring proprietary enterprise pharmaceutical datasets.</li>
+              <li>Served as <strong>Product Owner (CSPO)</strong> for the Customer Internal Data E2E processing pipeline, dramatically accelerating ingestion velocity and client time-to-value.</li>
+              <li>Led the R&D and deployment of Generative AI applications to extract, summarize, and structure unstructured experimental records in Electronic Lab Notebooks (ELNs) and IP documents.</li>
+              <li>Acted as subject matter expert for Neuroscience and Oncology therapeutic areas, shaping platform roadmap with executive stakeholders and technical product managers.</li>
+            </ul>
+
+            <div class="v1-job-header">
+              <div><span class="v1-job-title">Scientist II – Customer Therapeutics Data</span> — <span class="v1-company">BenchSci</span></div>
+              <span class="v1-job-date">May 2022 – Jul 2023 | Remote (Toronto, ON)</span>
+            </div>
+            <ul class="v1-bullets">
+              <li>Engineered automated data ingestion and ontology mapping pipelines in Python/SQL for preclinical assays and biological reagents, reducing manual review cycles by over 30%.</li>
+              <li>Partnered directly with pharmaceutical partners to map bespoke scientific schemas to standardized knowledge graph ontologies.</li>
+            </ul>
+
+            <div class="v1-job-header">
+              <div><span class="v1-job-title">Postdoctoral Research Fellow</span> — <span class="v1-company">University of Victoria (Division of Medical Sciences)</span></div>
+              <span class="v1-job-date">Nov 2020 – Apr 2022 | Victoria, BC</span>
+            </div>
+            <ul class="v1-bullets">
+              <li>Recipient of the <strong>Health Research BC Trainee Award</strong> investigating cardiac arrhythmia and neurodevelopmental channelopathies (*ANK2* p.S646F) in BC Indigenous communities.</li>
+              <li>Bridged preclinical genetics, live-cell fluorescence microscopy (calcium & voltage dynamics), and computational modeling with patient ECG data to provide clinical diagnostic insights.</li>
+            </ul>
+
+            <div class="v1-job-header">
+              <div><span class="v1-job-title">Graduate Research Assistant (Ph.D. Candidate)</span> — <span class="v1-company">University of Victoria</span></div>
+              <span class="v1-job-date">Sep 2015 – Aug 2020 | Victoria, BC</span>
+            </div>
+            <ul class="v1-bullets">
+              <li>Built custom Python and ImageJ bio-image analysis pipelines for automated quantification of 3D dendritic spine morphology and synaptic plasticity in cortical neurons.</li>
+              <li>Taught neuroanatomy and histology laboratory curricula to 1st/2nd year medical students (Island Medical Program, UBC/UVic).</li>
+            </ul>
+          </div>
+
+          <div class="v1-section">
+            <div class="v1-section-title">Education & Certifications</div>
+            <div class="v1-edu-item">
+              <div><span class="v1-edu-degree">Doctor of Philosophy (Ph.D.) in Neuroscience</span> — <span class="v1-edu-school">University of Victoria, BC, Canada</span></div>
+              <span class="v1-job-date">2015 – 2020</span>
+            </div>
+            <div class="v1-edu-item">
+              <div><span class="v1-edu-degree">Doctor of Medicine (MD / Médico y Cirujano)</span> — <span class="v1-edu-school">Universidad del Valle, Cali, Colombia</span></div>
+              <span class="v1-job-date">2007 – 2014</span>
+            </div>
+            <div style="margin-top: 6px; font-size: 12.5px; color: var(--text-secondary);">
+              <strong>Certifications:</strong> Certified Google Generative AI Leader (2025) • Google Data Analytics Specialization (2026) • Certified Scrum Product Owner (CSPO - 2024).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VERSION 2 -->
+      <div id="tab-v2" class="tab-content">
+        <div class="resume-paper v2-paper">
+          <aside class="v2-sidebar">
+            <div class="v2-sidebar-section">
+              <h3>Contact & Profiles</h3>
+              <div class="v2-contact-item">📍 Victoria, BC, Canada</div>
+              <div class="v2-contact-item">✉️ <a href="mailto:jucamilo.sanchez@gmail.com">jucamilo.sanchez@gmail.com</a></div>
+              <div class="v2-contact-item">🔗 <a href="https://linkedin.com/in/juancsanchezarias/" target="_blank">linkedin.com/in/juancsanchezarias</a></div>
+              <div class="v2-contact-item">🌐 <a href="https://juansanar.com" target="_blank">juansanar.com</a></div>
+              <div class="v2-contact-item">🐙 <a href="https://github.com/juansanar" target="_blank">github.com/juansanar</a></div>
+              <div class="v2-contact-item">🇨🇴 🇨🇦 Colombian-Canadian</div>
+            </div>
+
+            <div class="v2-sidebar-section">
+              <h3>Core Competencies</h3>
+              <div class="v2-skill-group">
+                <div class="v2-skill-title">AI & Data Strategy</div>
+                <div class="v2-tags">
+                  <span class="v2-tag">Generative AI</span>
+                  <span class="v2-tag">RAG Frameworks</span>
+                  <span class="v2-tag">Prompt Eng.</span>
+                  <span class="v2-tag">Knowledge Graphs</span>
+                  <span class="v2-tag">LLM Benchmarks</span>
+                </div>
+              </div>
+              <div class="v2-skill-group">
+                <div class="v2-skill-title">Domain Expertise</div>
+                <div class="v2-tags">
+                  <span class="v2-tag">Preclinical Discovery</span>
+                  <span class="v2-tag">Clinical Medicine</span>
+                  <span class="v2-tag">Neuroscience</span>
+                  <span class="v2-tag">Bio-Ontologies</span>
+                  <span class="v2-tag">Bio-Image Analysis</span>
+                </div>
+              </div>
+              <div class="v2-skill-group">
+                <div class="v2-skill-title">Product & Leadership</div>
+                <div class="v2-tags">
+                  <span class="v2-tag">Product Owner (CSPO)</span>
+                  <span class="v2-tag">Agile / Scrum</span>
+                  <span class="v2-tag">Team Leadership</span>
+                  <span class="v2-tag">Stakeholder Strategy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="v2-sidebar-section">
+              <h3>Technical Stack</h3>
+              <div class="v2-tags">
+                <span class="v2-tag">Python</span>
+                <span class="v2-tag">R</span>
+                <span class="v2-tag">SQL (PostgreSQL, BQ)</span>
+                <span class="v2-tag">GCP</span>
+                <span class="v2-tag">Docker</span>
+                <span class="v2-tag">ImageJ / Fiji</span>
+                <span class="v2-tag">Git</span>
+                <span class="v2-tag">Jira</span>
+              </div>
+            </div>
+
+            <div class="v2-sidebar-section">
+              <h3>Certifications</h3>
+              <div class="v2-cert-item">
+                <div class="v2-cert-name">Google GenAI Leader</div>
+                <div class="v2-cert-org">Google Cloud • 2025</div>
+              </div>
+              <div class="v2-cert-item">
+                <div class="v2-cert-name">Data Analytics Spec.</div>
+                <div class="v2-cert-org">Google Cloud • 2026</div>
+              </div>
+              <div class="v2-cert-item">
+                <div class="v2-cert-name">Product Owner (CSPO)</div>
+                <div class="v2-cert-org">Scrum Alliance • 2024</div>
+              </div>
+            </div>
+
+            <div class="v2-sidebar-section">
+              <h3>Languages</h3>
+              <div class="v2-contact-item"><strong>Spanish:</strong> Native</div>
+              <div class="v2-contact-item"><strong>English:</strong> Fluent / Bilingual</div>
+            </div>
+          </aside>
+
+          <main class="v2-main">
+            <div class="v2-header">
+              <h1 class="v2-name">Juan C. Sanchez-Arias, MD, PhD</h1>
+              <p class="v2-tagline">Data Scientist • Physician-Scientist • HealthTech & AI Systems Leader</p>
+            </div>
+
+            <section class="v2-section">
+              <h2>Executive Profile</h2>
+              <p class="v2-summary-text">
+                Physician-Scientist and Google-Certified Generative AI Leader with 10+ years of clinical, biomedical, and healthtech technology experience. Specialized in engineering production-grade Generative AI pipelines, RAG architectures, and biomedical knowledge graphs that accelerate preclinical drug discovery. Proven track record leading cross-functional teams of PhD scientists and ML engineers, bridging clinical insights with modern data engineering to build compliant, scalable, and impactful AI products.
+              </p>
+            </section>
+
+            <section class="v2-section">
+              <h2>Professional Experience</h2>
+
+              <div class="v2-exp-item">
+                <div class="v2-role-header">
+                  <span class="v2-role-title">Data Scientist</span>
+                  <span class="v2-period">Jan 2025 – Present</span>
+                </div>
+                <div class="v2-role-company">BenchSci | Remote (Toronto, ON)</div>
+                <ul class="v2-bullets">
+                  <li>Architect production-grade Generative AI, RAG, and agentic workflows to extract and synthesize complex preclinical data for top global pharmaceutical clients.</li>
+                  <li>Build automated LLM evaluation frameworks to enforce high scientific precision, hallucination mitigation, and domain compliance.</li>
+                  <li>Scale biomedical knowledge graph coverage and improve semantic vector search retrieval across millions of papers, patents, and customer records.</li>
+                </ul>
+              </div>
+
+              <div class="v2-exp-item">
+                <div class="v2-role-header">
+                  <span class="v2-role-title">Science Tech Lead & Team Lead</span>
+                  <span class="v2-period">Jul 2023 – Jan 2025</span>
+                </div>
+                <div class="v2-role-company">BenchSci | Remote (Toronto, ON)</div>
+                <ul class="v2-bullets">
+                  <li>Managed a cross-functional team of PhD scientists and data engineers; served as <strong>Product Owner (CSPO)</strong> for client internal data E2E ingestion pipelines.</li>
+                  <li>Led R&D and deployment of Generative AI applications to extract and structure data from proprietary Electronic Lab Notebooks (ELNs) and IP documents.</li>
+                  <li>Acted as subject matter expert for Neuroscience and Oncology therapeutic areas, steering technical roadmaps.</li>
+                </ul>
+              </div>
+
+              <div class="v2-exp-item">
+                <div class="v2-role-header">
+                  <span class="v2-role-title">Scientist II – Customer Therapeutics Data</span>
+                  <span class="v2-period">May 2022 – Jul 2023</span>
+                </div>
+                <div class="v2-role-company">BenchSci | Remote (Toronto, ON)</div>
+                <ul class="v2-bullets">
+                  <li>Engineered automated ingestion and ontology mapping pipelines in Python/SQL for preclinical assays and biological reagents, reducing manual curation by 30%.</li>
+                </ul>
+              </div>
+
+              <div class="v2-exp-item">
+                <div class="v2-role-header">
+                  <span class="v2-role-title">Postdoctoral Research Fellow (Health Research BC Fellow)</span>
+                  <span class="v2-period">Nov 2020 – Apr 2022</span>
+                </div>
+                <div class="v2-role-company">University of Victoria – Division of Medical Sciences | Victoria, BC</div>
+                <ul class="v2-bullets">
+                  <li>Investigated cardiac arrhythmia and neurodevelopmental channelopathies (*ANK2* p.S646F) in BC Indigenous communities; correlated live-cell fluorescence kinetics with clinical patient ECGs.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="v2-section">
+              <h2>Education</h2>
+              <div class="v2-edu-item">
+                <div><strong>Doctor of Philosophy (Ph.D.) in Neuroscience</strong> — University of Victoria, BC</div>
+                <span class="v2-period">2015 – 2020</span>
+              </div>
+              <div class="v2-edu-item">
+                <div><strong>Doctor of Medicine (MD / Médico y Cirujano)</strong> — Universidad del Valle, Colombia</div>
+                <span class="v2-period">2007 – 2014</span>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+
+      <!-- VERSION 3 -->
+      <div id="tab-v3" class="tab-content">
+        <div class="resume-paper v3-paper">
+          <!-- TOP HEADER -->
+          <header class="v3-header">
+            <div>
+              <h1 class="v3-name">Juan C. Sanchez-Arias, MD, PhD</h1>
+              <div class="v3-tagline">Data Scientist • Physician-Scientist • HealthTech & AI Systems Leader</div>
+            </div>
+            <div class="v3-contact">
+              <div>Victoria, BC, Canada • 🇨🇴 🇨🇦</div>
+              <div><a href="mailto:jucamilo.sanchez@gmail.com">jucamilo.sanchez@gmail.com</a></div>
+              <div><a href="https://linkedin.com/in/juancsanchezarias/" target="_blank">linkedin.com/in/juancsanchezarias</a> • <a href="https://juansanar.com" target="_blank">juansanar.com</a></div>
+            </div>
+          </header>
+
+          <!-- 3 CORE PILLARS (BENTO SUMMARY) -->
+          <div class="v3-pillars">
+            <div class="v3-pillar-card">
+              <div class="v3-pillar-title">🩺 Clinical Medicine</div>
+              <div class="v3-pillar-desc">Medical Doctor (MD) with acute clinical rotation background; translating clinical phenotype & diagnostics to computational models.</div>
+            </div>
+            <div class="v3-pillar-card">
+              <div class="v3-pillar-title">🔬 Biomedical Discovery</div>
+              <div class="v3-pillar-desc">PhD Neuroscientist & Health Research BC Fellow; expert in high-content microscopy, target biology, and preclinical mechanisms.</div>
+            </div>
+            <div class="v3-pillar-card">
+              <div class="v3-pillar-title">⚡ AI Systems & Product</div>
+              <div class="v3-pillar-desc">Data Scientist & Certified Scrum Product Owner; building production GenAI, RAG, and knowledge graphs for global pharma.</div>
+            </div>
+          </div>
+
+          <!-- EXECUTIVE SUMMARY -->
+          <section class="v3-section">
+            <h2 class="v3-heading">Executive Profile</h2>
+            <p class="v3-profile-p">
+              Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader with 10+ years of combined clinical, biomedical research, and industry technology experience. Specialized in architecting production-grade Generative AI pipelines, RAG architectures, and biomedical knowledge graphs that accelerate preclinical drug discovery and solve complex biological data problems. Proven track record leading cross-functional teams of PhD scientists, software engineers, and product managers to deliver scalable, scientifically rigorous, and high-impact healthtech products.
+            </p>
+          </section>
+
+          <!-- PROFESSIONAL EXPERIENCE -->
+          <section class="v3-section">
+            <h2 class="v3-heading">Professional Work Experience</h2>
+
+            <div class="v3-exp-card">
+              <div class="v3-exp-header">
+                <div><span class="v3-exp-title">Data Scientist</span> — <span class="v3-company">BenchSci</span></div>
+                <span class="v3-period">Jan 2025 – Present | Remote (Toronto, ON)</span>
+              </div>
+              <div class="v3-exp-tags">
+                <span class="v3-tag">Generative AI</span>
+                <span class="v3-tag">RAG Architectures</span>
+                <span class="v3-tag">LLM Benchmarking</span>
+                <span class="v3-tag">Knowledge Graphs</span>
+                <span class="v3-tag">Python & SQL</span>
+              </div>
+              <ul class="v3-bullets">
+                <li>Architect production-grade Generative AI, RAG, and agentic workflows to extract, synthesize, and contextualize high-dimensional preclinical data for top global pharmaceutical clients.</li>
+                <li>Build automated LLM evaluation frameworks and benchmark suites to enforce factual precision, hallucination mitigation, and strict scientific governance.</li>
+                <li>Scale biomedical knowledge graph coverage and improve semantic vector search retrieval across millions of papers, patents, and customer records.</li>
+              </ul>
+            </div>
+
+            <div class="v3-exp-card">
+              <div class="v3-exp-header">
+                <div><span class="v3-exp-title">Science Tech Lead & Team Lead – Customer Therapeutics Data</span> — <span class="v3-company">BenchSci</span></div>
+                <span class="v3-period">Jul 2023 – Jan 2025 | Remote (Toronto, ON)</span>
+              </div>
+              <div class="v3-exp-tags">
+                <span class="v3-tag">Team Leadership</span>
+                <span class="v3-tag">Product Ownership (CSPO)</span>
+                <span class="v3-tag">ELN Ingestion</span>
+                <span class="v3-tag">Bio-Ontologies</span>
+                <span class="v3-tag">Pharma Client Strategy</span>
+              </div>
+              <ul class="v3-bullets">
+                <li>Managed and mentored a cross-functional team of PhD-level scientists and data engineers; served as <strong>Product Owner (CSPO)</strong> for client internal data E2E ingestion pipelines.</li>
+                <li>Led the R&D and deployment of Generative AI applications to extract and structure data from proprietary Electronic Lab Notebooks (ELNs) and intellectual property documents.</li>
+                <li>Acted as subject matter expert for Neuroscience and Oncology therapeutic areas, steering technical roadmaps in close alignment with VP stakeholders.</li>
+              </ul>
+            </div>
+
+            <div class="v3-exp-card">
+              <div class="v3-exp-header">
+                <div><span class="v3-exp-title">Scientist II – Customer Therapeutics Data</span> — <span class="v3-company">BenchSci</span></div>
+                <span class="v3-period">May 2022 – Jul 2023 | Remote (Toronto, ON)</span>
+              </div>
+              <div class="v3-exp-tags">
+                <span class="v3-tag">ETL Pipelines</span>
+                <span class="v3-tag">Data Standardization</span>
+                <span class="v3-tag">Preclinical Assays</span>
+              </div>
+              <ul class="v3-bullets">
+                <li>Engineered automated data ingestion and ontology mapping pipelines in Python/SQL for preclinical assays and biological reagents, reducing manual review cycles by over 30%.</li>
+              </ul>
+            </div>
+
+            <div class="v3-exp-card">
+              <div class="v3-exp-header">
+                <div><span class="v3-exp-title">Postdoctoral Research Fellow (Health Research BC Fellow)</span> — <span class="v3-company">University of Victoria</span></div>
+                <span class="v3-period">Nov 2020 – Apr 2022 | Victoria, BC</span>
+              </div>
+              <div class="v3-exp-tags">
+                <span class="v3-tag">Confocal Microscopy</span>
+                <span class="v3-tag">Cardiac & Neural Kinetics</span>
+                <span class="v3-tag">Translational Genetics</span>
+              </div>
+              <ul class="v3-bullets">
+                <li>Awarded the <strong>Michael Smith Health Research BC Trainee Award</strong> to investigate *ANK2* channelopathies in BC Indigenous communities; correlated live-cell fluorescence kinetics with clinical patient ECGs.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- EDUCATION & SKILLS GRID -->
+          <section class="v3-section">
+            <h2 class="v3-heading">Education & Technical Foundation</h2>
+            <div class="v3-grid-two">
+              <div class="v3-mini-box">
+                <div class="v3-box-title">🎓 Education</div>
+                <div class="v3-edu-row">
+                  <strong>Ph.D. in Neuroscience</strong>
+                  <span>2015 – 2020</span>
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px;">University of Victoria, BC, Canada</div>
+                
+                <div class="v3-edu-row">
+                  <strong>Doctor of Medicine (MD)</strong>
+                  <span>2007 – 2014</span>
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-muted);">Universidad del Valle, Cali, Colombia (Dean’s List)</div>
+              </div>
+
+              <div class="v3-mini-box">
+                <div class="v3-box-title">🛠️ Stack & Certifications</div>
+                <div style="font-size: 12px; line-height: 1.5; color: var(--text-secondary);">
+                  <strong>AI / Data:</strong> Python, R, SQL, GenAI (LLMs, RAG, Agents), Knowledge Graphs, GCP, Docker.<br>
+                  <strong>Certifications:</strong> Google Generative AI Leader (2025) • Google Data Analytics (2026) • Certified Scrum Product Owner (CSPO).
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  // Tab Switcher Logic
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.getAttribute('data-tab');
+
+      tabButtons.forEach((b) => b.classList.remove('active'));
+      tabContents.forEach((c) => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetContent = document.getElementById(`tab-${targetTab}`);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
+    });
+  });
+</script>
+
+<style>
+  .preview-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .preview-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .preview-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--teal-primary);
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--teal-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+  }
+
+  .page-title {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .page-desc {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+  }
+
+  /* TAB CONTROLS */
+  .tab-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-surface-elevated);
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+  }
+
+  .tab-btn:hover {
+    border-color: var(--teal-primary);
+    transform: translateY(-2px);
+  }
+
+  .tab-btn.active {
+    border-color: var(--teal-primary);
+    background: var(--teal-surface);
+    box-shadow: 0 4px 14px rgba(15, 118, 110, 0.15);
+  }
+
+  .tab-icon {
+    font-size: 1.6rem;
+  }
+
+  .tab-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .tab-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* TAB CONTENT SWITCHING */
+  .tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESUME PAPERS COMMON */
+  .resume-paper {
+    background: #ffffff;
+    color: #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+  }
+
+  /* VERSION 1: CLASSIC MINIMALIST */
+  .v1-paper {
+    max-width: 850px;
+    padding: 40px;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .v1-header {
+    text-align: center;
+    border-bottom: 2px solid #0f766e;
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+  }
+
+  .v1-name {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 4px 0;
+  }
+
+  .v1-title-tagline {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f766e;
+    margin: 0 0 8px 0;
+  }
+
+  .v1-contact-bar {
+    font-size: 12.5px;
+    color: #6b7280;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .v1-contact-bar a {
+    color: #4b5563;
+    text-decoration: none;
+  }
+
+  .v1-section {
+    margin-bottom: 18px;
+  }
+
+  .v1-section-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #0f766e;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 4px;
+    margin: 0 0 10px 0;
+  }
+
+  .v1-profile-text {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #374151;
+    margin: 0;
+  }
+
+  .v1-skills-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    row-gap: 6px;
+    font-size: 12.8px;
+  }
+
+  .v1-skills-label {
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .v1-job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .v1-job-title {
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .v1-company {
+    font-weight: 600;
+    color: #0f766e;
+  }
+
+  .v1-job-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  .v1-bullets {
+    margin: 4px 0 12px 18px;
+    padding: 0;
+  }
+
+  .v1-bullets li {
+    font-size: 12.8px;
+    line-height: 1.45;
+    color: #374151;
+    margin-bottom: 4px;
+  }
+
+  .v1-edu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+
+  .v1-edu-degree {
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .v1-edu-school {
+    color: #6b7280;
+  }
+
+  /* VERSION 2: EXECUTIVE SIDEBAR */
+  .v2-paper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 960px;
+    overflow: hidden;
+  }
+
+  .v2-sidebar {
+    background: #f8fafc;
+    padding: 32px 22px;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .v2-sidebar-section h3 {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0f766e;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #cbd5e1;
+  }
+
+  .v2-contact-item {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 6px;
+  }
+
+  .v2-contact-item a {
+    color: #0f766e;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .v2-skill-group {
+    margin-bottom: 10px;
+  }
+
+  .v2-skill-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .v2-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .v2-tag {
+    font-size: 11px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #334155;
+    font-weight: 500;
+  }
+
+  .v2-cert-item {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .v2-cert-name {
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .v2-cert-org {
+    color: #64748b;
+    font-size: 11px;
+  }
+
+  .v2-main {
+    padding: 32px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .v2-header {
+    border-bottom: 2px solid #0f766e;
+    padding-bottom: 12px;
+  }
+
+  .v2-name {
+    font-size: 25px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+  }
+
+  .v2-tagline {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f766e;
+    margin: 0;
+  }
+
+  .v2-section h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #0f766e;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .v2-summary-text {
+    font-size: 12.8px;
+    line-height: 1.55;
+    color: #334155;
+    margin: 0;
+  }
+
+  .v2-exp-item {
+    margin-bottom: 14px;
+  }
+
+  .v2-role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .v2-role-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .v2-role-company {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #0f766e;
+    margin-bottom: 3px;
+  }
+
+  .v2-period {
+    font-size: 11.5px;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .v2-bullets {
+    margin: 3px 0 0 16px;
+    padding: 0;
+  }
+
+  .v2-bullets li {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #334155;
+    margin-bottom: 3px;
+  }
+
+  .v2-edu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    margin-bottom: 4px;
+  }
+
+  /* VERSION 3: HEALTHTECH IMPACT */
+  .v3-paper {
+    max-width: 900px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .v3-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #0d9488;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .v3-name {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+  }
+
+  .v3-tagline {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #0f766e;
+  }
+
+  .v3-contact {
+    font-size: 12.5px;
+    color: #64748b;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .v3-contact a {
+    color: #0f766e;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .v3-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .v3-pillar-card {
+    background: #f0fdfa;
+    border: 1px solid #ccfbf1;
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+
+  .v3-pillar-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0f766e;
+    margin-bottom: 4px;
+  }
+
+  .v3-pillar-desc {
+    font-size: 11.5px;
+    color: #334155;
+    line-height: 1.4;
+  }
+
+  .v3-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .v3-heading {
+    font-size: 13.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #0f766e;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin: 0;
+  }
+
+  .v3-profile-p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0;
+  }
+
+  .v3-exp-card {
+    border-left: 3px solid #0d9488;
+    padding-left: 14px;
+    margin-bottom: 14px;
+  }
+
+  .v3-exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .v3-exp-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .v3-company {
+    font-size: 12.8px;
+    font-weight: 600;
+    color: #0f766e;
+  }
+
+  .v3-period {
+    font-size: 11.8px;
+    font-weight: 600;
+    color: #64748b;
+  }
+
+  .v3-exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 4px 0 6px 0;
+  }
+
+  .v3-tag {
+    font-size: 10.5px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .v3-bullets {
+    margin: 3px 0 0 14px;
+    padding: 0;
+  }
+
+  .v3-bullets li {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #334155;
+    margin-bottom: 3px;
+  }
+
+  .v3-grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .v3-mini-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .v3-box-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0f172a;
+    margin-bottom: 6px;
+  }
+
+  .v3-edu-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .v2-paper {
+      grid-template-columns: 1fr;
+    }
+    .v3-pillars {
+      grid-template-columns: 1fr;
+    }
+    .v3-grid-two {
+      grid-template-columns: 1fr;
+    }
+    .v3-header {
+      flex-direction: column;
+    }
+    .v3-contact {
+      text-align: left;
+    }
+  }
+</style>
