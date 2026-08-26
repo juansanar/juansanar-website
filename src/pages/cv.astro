@@ -438,11 +438,63 @@ const publications = [
         </div>
       </section>
 
-      <!-- Selected Awards -->
+      <!-- Selected Awards & Fellowships -->
       <section class="cv-section card">
         <h2 class="section-title">
           <span class="section-badge">🏆</span> Selected Awards & Fellowships
         </h2>
+
+        <!-- Featured Spotlight -->
+        <div class="award-spotlight">
+          <div class="award-spotlight-header">
+            <div>
+              <div class="spotlight-tag">⭐ FEATURED RESEARCH AWARD</div>
+              <h3 class="spotlight-title">Research Trainee Award</h3>
+              <p class="spotlight-org">Michael Smith Health Research BC &bull; University of Victoria</p>
+            </div>
+            <span class="spotlight-period">2021 – 2022</span>
+          </div>
+
+          <div class="spotlight-project">
+            <h4 class="project-title">
+              The impact of the loss-of-function ankyrin-B p.S646F variant on cardiomyocyte and neuronal excitability: Implications for diagnosis and treatment of heart disease
+            </h4>
+            <p class="project-mentors">
+              <strong>Mentors & Collaborators:</strong> Dr. Leigh Anne Swayne &amp; Dr. Laura Arbour (Division of Medical Sciences)
+            </p>
+            <p class="project-summary">
+              Investigated the cellular and molecular mechanisms of a genetic variant in the <em>ANK2</em> gene (ankyrin-B p.S646F) identified in Indigenous Communities of Northern BC (Gitxsan Nation) associated with cardiac arrhythmias, structural cardiomyopathy, seizures, and cerebral aneurysms. Applied advanced fluorescence live-cell imaging of calcium and voltage dynamics along with computational modeling in immature heart and brain cells to bridge fundamental laboratory observations to patient electrocardiograms.
+            </p>
+          </div>
+
+          <div class="spotlight-actions">
+            <a
+              href="https://www.healthresearchbc.ca/award-recipient/juan-sanchez-arias/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm"
+            >
+              Health Research BC Profile ↗
+            </a>
+            <a
+              href="https://www.healthresearchbc.ca/award/the-impact-of-the-loss-of-function-ankyrin-b-p-s646f-variant-on-cardiomyocyte-and-neuronal-excitability-implications-for-diagnosis-and-treatment-of-heart-disease/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm"
+            >
+              Award Abstract ↗
+            </a>
+            <a
+              href="https://web.archive.org/web/https://www.healthresearchbc.ca/award-recipient/juan-sanchez-arias/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm"
+            >
+              Wayback Archive ↗
+            </a>
+          </div>
+        </div>
+
         <div class="awards-grid">
           {awards.map((a) => (
             <div class="award-item">
@@ -764,6 +816,96 @@ const publications = [
   }
 
   /* Awards */
+  .award-spotlight {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-surface-elevated), var(--accent-light));
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 0.5rem;
+  }
+
+  .award-spotlight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .spotlight-tag {
+    display: inline-block;
+    font-size: 0.725rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    background: var(--bg-surface);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--accent);
+    margin-bottom: 0.45rem;
+  }
+
+  .spotlight-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .spotlight-org {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .spotlight-period {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .spotlight-project {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .project-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+
+  .project-mentors {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .project-summary {
+    margin: 0;
+    font-size: 0.925rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .spotlight-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding-top: 0.25rem;
+  }
+
   .awards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
