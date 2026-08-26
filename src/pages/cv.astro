@@ -1,18 +1,266 @@
 ---
 // cv.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const education = [
+  {
+    degree: "Doctor of Philosophy (Ph.D.) in Neuroscience",
+    institution: "University of Victoria",
+    location: "Victoria, BC, Canada",
+    period: "2015 – 2020",
+    description: "Doctoral research in cellular and molecular neuroscience, synaptic plasticity, and cerebral cortex development."
+  },
+  {
+    degree: "Doctor of Medicine (MD)",
+    institution: "Universidad del Valle, School of Medicine",
+    location: "Cali, Colombia",
+    period: "2007 – 2014",
+    description: "Medical degree with comprehensive clinical rotations and biomedical research training."
+  }
+];
+
+const workExperience = [
+  {
+    title: "Data Scientist",
+    company: "BenchSci",
+    location: "Toronto, ON (Remote)",
+    period: "2025 – Present",
+    bullets: [
+      "Architecting AI-driven data intelligence pipelines and hardening extraction systems to deliver high-throughput API endpoints to support agentic preclinical biomedical acceleration."
+    ]
+  },
+  {
+    title: "Science Tech Lead and Team Lead",
+    company: "BenchSci",
+    location: "Toronto, ON (Remote)",
+    period: "2023 – 2025",
+    bullets: [
+      "Led multidisciplinary teams and directed technical strategy to improve the observability and scientific quality of data pipelines.",
+      "Engineered comprehensive analytics frameworks to evaluate disease relations across journal articles (MONDO, ICD-10, SNOMED), ensuring robust data quality metrics and standards.",
+      "Partnered with cross-functional stakeholders (Product, Engineering) to align scientific requirements with shared technical execution and delivery."
+    ]
+  },
+  {
+    title: "Scientist II - Data Extraction",
+    company: "BenchSci",
+    location: "Toronto, ON (Remote)",
+    period: "2022 – 2023",
+    bullets: [
+      "Developed and optimized biomedical data extraction workflows to enhance precision and data quality."
+    ]
+  }
+];
+
+const researchExperience = [
+  {
+    title: "Postdoctoral Research Fellow",
+    institution: "University of Victoria, Division of Medical Sciences",
+    location: "Victoria, BC",
+    period: "2020 – 2022",
+    bullets: [
+      "Led the design of a holistic and culturally safe translational research project to investigate an arrhythmia-causing genetic variant identified in the Gitxsan First Nation.",
+      "Managed complex genomic and transcriptomic datasets using advanced bioinformatics (R, Bioconductor) to discover mechanisms underlying cardiomyocyte and neuronal calcium homeostasis.",
+      "Communicated vital research outcomes via peer-reviewed journals and community-based talks, enhancing the collective knowledge of congenital cardiac conditions."
+    ]
+  },
+  {
+    title: "Graduate Research Assistant",
+    institution: "University of Victoria, Division of Medical Sciences",
+    location: "Victoria, BC",
+    period: "2015 – 2020",
+    bullets: [
+      "Engineered conditional knockout mouse models and optimized primary neuronal cultures to investigate mechanisms of dendritic spine plasticity and cerebral cortex development.",
+      "Developed advanced microscopy methods to visualize cellular dynamics.",
+      "Championed open-science practices by establishing accessible bio-image analysis frameworks for the research community."
+    ]
+  },
+  {
+    title: "Undergraduate Medical Researcher",
+    institution: "Universidad del Valle, Centro de Estudios Cerebrales",
+    location: "Cali, Colombia",
+    period: "2014",
+    bullets: [
+      "Facilitated literature seminars and thematic discussions for researchers and partners at the Centro de Estudios Cerebrales.",
+      "Refined experimental procedures for modeling diffuse traumatic brain injury and developed staining techniques for organotypic brain tissue preparations."
+    ]
+  },
+  {
+    title: "Undergraduate Medical Researcher",
+    institution: "Universidad del Valle, School of Public Health",
+    location: "Cali, Colombia",
+    period: "2010 – 2011",
+    bullets: [
+      "Coordinated a regional survey assessing cardiovascular risk factors in spinal cord injury patients, identifying key social determinants of health to inform targeted rehabilitation plans.",
+      "Collaborated with Physical Medicine and Rehabilitation residents and attendings to prescribe comprehensive, evidence-based management plans for chronic patients."
+    ]
+  }
+];
+
+const clinicalExperiences = [
+  {
+    title: "Observership: Functional Neurosurgery (4 weeks)",
+    institution: "University of Illinois Hospital & Health Sciences System",
+    location: "Chicago, IL, USA",
+    period: "2014",
+    detail: "Supervisor: Dr. Konstantin Slavin"
+  },
+  {
+    title: "Pre-Diploma Internship (Internado Rotatorio)",
+    institution: "Hospital Universitario del Valle ESE | Universidad del Valle",
+    location: "Cali, Colombia",
+    period: "2013 – 2014",
+    detail: "Rotations: Internal Medicine (7 wks), Paediatrics (7 wks), Obstetrics & Gynaecology (7 wks), Specialized Research Internship in Biomedical Science / Neuroscience (16 wks), Surgery / Trauma (7 wks), Family Medicine (4 wks)."
+  },
+  {
+    title: "Professional Elective: Neurosurgery (Neurocirugía - 4 weeks)",
+    institution: "Hospital Universitario del Valle ESE | Universidad del Valle",
+    location: "Cali, Colombia",
+    period: "2012",
+    detail: "Clinical rotation in neurosurgical evaluation and surgical procedures."
+  },
+  {
+    title: "Professional Elective: Systems Pathology (Patología de Sistemas - 4 weeks)",
+    institution: "Universidad del Valle, School of Medicine",
+    location: "Cali, Colombia",
+    period: "2011",
+    detail: "Comprehensive systemic histopathology and diagnostic pathology."
+  }
+];
+
+const teachingExperience = [
+  {
+    title: "Teaching Assistant",
+    institution: "Island Medical Program, UBC | University of Victoria",
+    location: "Victoria, BC",
+    period: "2017 – 2020",
+    course: "Foundations of Medical Practice I and II (MEDD412, MEDD421, MEDD422)",
+    description: "Instructed first- and second-year medical trainees in neuroanatomy laboratory sessions, fostering a dynamic educational space centered on the functional integration of clinical signs with neural structures and physiological processes."
+  }
+];
+
+const awards = [
+  { award: "Research Trainee Award", organization: "Michael Smith Health Research BC", period: "2021 – 2022" },
+  { award: "Nb Gulila Star Award", organization: "International Gap Junction Conference", period: "2019" },
+  { award: "John & Myrtle Tilley Graduate Scholarship", organization: "University of Victoria, Faculty of Graduate Studies", period: "2019" },
+  { award: "James & Laurette Agnew Memorial Scholarship", organization: "University of Victoria, Faculty of Graduate Studies", period: "2015 – 2019" },
+  { award: "Donald Wagg Graduate Scholarship", organization: "University of Victoria, Faculty of Graduate Studies", period: "2017 – 2018" },
+  { award: "Graduate Award", organization: "University of Victoria, Faculty of Graduate Studies", period: "2015 – 2017" },
+  { award: "Fellowship Entrance Award", organization: "University of Victoria, Faculty of Graduate Studies", period: "2015" },
+  { award: "School of Medicine Yearly Dean’s List", organization: "Universidad del Valle, School of Medicine", period: "2007, 2009, 2013, 2014" }
+];
+
+const leadership = [
+  {
+    role: "Builder / Hacker (Third Place)",
+    organization: "Island Health Code Hack | Victoria, BC",
+    period: "2023",
+    desc: "Collaborated within an interdisciplinary team to pitch and develop targeted technological solutions aimed at reducing 'PJ paralysis' and preventing patient deconditioning across Island Health."
+  },
+  {
+    role: "Co-creator & Organizer",
+    organization: "“Who can become a scientist?” Symposium | Victoria, BC",
+    period: "2021 – 2022",
+    desc: "Established an educational symposium for high school students addressing equity, diversity, and inclusion in STEM, advocating for underrepresented populations in the sciences."
+  },
+  {
+    role: "Local Chapter Coordinator",
+    organization: "CIHR Brain Bee | University of Victoria | Victoria, BC",
+    period: "2017 – 2023",
+    desc: "Directed local operations and social media for the Victoria Brain Bee, mentoring high school students and securing funding to sponsor winners for national competitions."
+  },
+  {
+    role: "Newsletter Co-editor",
+    organization: "BC Regenerative Medicine Network | Victoria, BC",
+    period: "2017 – 2019",
+    desc: "Curated and edited organizational communications, recruited symposium speakers, and evaluated scientific abstracts to promote regional collaboration in regenerative medicine."
+  },
+  {
+    role: "Student Representative",
+    organization: "Neuroscience Graduate Program | University of Victoria | Victoria, BC",
+    period: "2017 – 2018",
+    desc: "Spearheaded collaborative programs dedicated to championing psychological wellness and mental health support for graduate trainees; orchestrated recruitment of distinguished researchers for the Seminar Series."
+  }
+];
+
+const professionalDevelopment = [
+  { item: "Google Data Analytics Specialization", institution: "Google Cloud", year: "2026" },
+  { item: "Certified Google Generative AI Leader", institution: "Google Cloud", year: "2025" },
+  { item: "Certified Scrum Product Owner (CSPO - 1920762)", institution: "Scrum Alliance", year: "2024" },
+  { item: "Course in Genetic Epidemiology and Epigenetics", institution: "Universidad del Valle, School of Public Health", year: "2022" },
+  { item: "Code in Place", institution: "Stanford University", year: "2021" }
+];
+
+const affiliations = [
+  { role: "MEMBER", organization: "Colegio Colombiano de Neurociencias (COLNE)", period: "2020 – Ongoing" },
+  { role: "MEMBER", organization: "Canadian Cardiovascular Society (CSS)", period: "2021 – 2022" },
+  { role: "MEMBER", organization: "Canadian Association for Neuroscience (CAN)", period: "2015 – 2022" },
+  { role: "MEMBER", organization: "Society for Neuroscience (SFN)", period: "2016 – 2020" }
+];
+
+const publications = [
+  {
+    authors: "York, Nicole S; Sanchez-Arias, Juan C; McAdam, Alexa CH; Rivera, Joel E; Arbour, Laura T; Swayne, Leigh Anne.",
+    title: "Mechanisms underlying the role of ankyrin-B in cardiac and neurological health and disease.",
+    journal: "Frontiers in Cardiovascular Medicine 9, 964675",
+    year: "2022",
+    publisher: "Frontiers Media SA"
+  },
+  {
+    authors: "Kallas, Dania; Bos, Johan Martijn; Peltenburg, Puck; Franciosi, Sonia; Mohajeri, Arezoo; Cheung, Matthew; Brett, Laura; York, Nicole; Sanchez-Arias, Juan C; Swayne, Leigh Anne.",
+    title: "PO-655-05 IS ANKYRIN-2 A POTENTIAL GENETIC MODIFIER IN PEDIATRIC CATECHOLAMINERGIC POLYMORPHIC VENTRICULAR TACHYCARDIA?.",
+    journal: "Heart Rhythm 19,5,S264-S265",
+    year: "2022",
+    publisher: "Elsevier"
+  },
+  {
+    authors: "Sanchez-Arias, Juan C; Carrier, Micael; Frederiksen, Simona D; Shevtsova, Olga; McKee, Chloe; van der Slagt, Emma; Gonçalves de Andrade, Elisa; Nguyen, Hai Lam; Young, Penelope A; Tremblay, Marie-eve.",
+    title: "A systematic, open-science framework for quantification of cell-types in mouse brain sections using fluorescence microscopy.",
+    journal: "Frontiers in Neuroanatomy 15, 722443",
+    year: "2021",
+    publisher: "Frontiers Media SA"
+  },
+  {
+    authors: "Sanchez-Arias, Juan C; van der Slagt, Emma; Vecchiarelli, Haley A; Candlish, Rebecca C; York, Nicole; Young, Penelope A; Shevtsova, Olga; Juma, Afnan; Tremblay, Marie-Eve; Swayne, Leigh Anne.",
+    title: "Purinergic signaling in nervous system health and disease: Focus on pannexin 1.",
+    journal: "Pharmacology & Therapeutics 225, 107840",
+    year: "2021",
+    publisher: "Pergamon"
+  },
+  {
+    authors: "Sanchez-Arias, Juan C; Candlish, Rebecca C; van der Slagt, Emma; Swayne, Leigh Anne.",
+    title: "Pannexin 1 regulates dendritic protrusion dynamics in immature cortical neurons.",
+    journal: "ENeuro 7(4)",
+    year: "2020",
+    publisher: "Society for Neuroscience"
+  },
+  {
+    authors: "Swayne, Leigh Anne; Johnstone, Scott R; Ng, Chen Seng; Sanchez-Arias, Juan C; Good, Miranda E; Penuela, Silvia; Lohman, Alexander W; Wolpe, Abigail G; Laubach, Victor E; Koval, Michael.",
+    title: "Consideration of Pannexin 1 channels in COVID-19 pathology and treatment.",
+    journal: "American Journal of Physiology-Lung Cellular and Molecular Physiology 319(1), L121-L125",
+    year: "2020",
+    publisher: "American Physiological Society"
+  },
+  {
+    authors: "Sanchez-Arias, Juan C; Liu, Mei; Choi, Catherine SW; Ebert, Sarah N; Brown, Craig E; Swayne, Leigh Anne.",
+    title: "Pannexin 1 regulates network ensembles and dendritic spine development in cortical neurons.",
+    journal: "ENeuro 6(3)",
+    year: "2019",
+    publisher: "Society for Neuroscience"
+  }
+];
 ---
 
 <BaseLayout
   title="Curriculum Vitae & Resume | Juan C. Sanchez-Arias, MD, PhD"
-  description="Download the Curriculum Vitae and Resume of Juan C. Sanchez-Arias, MD, PhD."
+  description="Official academic Curriculum Vitae and Industry Resume of Juan C. Sanchez-Arias, MD, PhD."
 >
   <div class="cv-page">
-    <div class="cv-header">
+    <!-- Header & Download Cards -->
+    <div class="cv-hero">
       <div>
-        <h1 class="page-title">Curriculum Vitae & Resume</h1>
+        <h1 class="page-title">Curriculum Vitae</h1>
         <p class="page-desc">
-          Official academic Curriculum Vitae and industry-focused Resume.
+          Official academic Curriculum Vitae and industry-focused career record of Juan C. Sanchez-Arias, MD, PhD.
         </p>
       </div>
 
@@ -29,16 +277,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div>
             <h3>Academic Curriculum Vitae</h3>
-            <p>Comprehensive record of publications, awards, clinical training, and academic appointments.</p>
+            <p>Comprehensive 3-page record of publications, clinical training, research, and awards.</p>
           </div>
           <div class="action-btn-group">
-            <a href="/files/juansanar_cv.pdf" target="_blank" class="btn btn-primary">
+            <a href="/files/juansanar_cv.pdf" download="Juan_Sanchez_Arias_CV.pdf" class="btn btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
               Download CV (PDF)
+            </a>
+            <a href="/files/juansanar_cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Open PDF ↗
             </a>
           </div>
         </div>
@@ -52,10 +303,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div>
             <h3>Industry Resume</h3>
-            <p>Focused overview of Data Science, AI-driven engineering, technical leadership, and industry impact.</p>
+            <p>Focused overview of Data Science, AI systems engineering, and technical leadership.</p>
           </div>
           <div class="action-btn-group">
-            <a href="/files/juansanar_resume.pdf" target="_blank" class="btn btn-secondary">
+            <a href="/files/juansanar_resume.pdf" download="Juan_Sanchez_Arias_Resume.pdf" class="btn btn-secondary">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -63,25 +314,262 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </svg>
               Download Resume (PDF)
             </a>
+            <a href="/files/juansanar_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Open PDF ↗
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PDF Viewer Section -->
-    <div class="viewer-section card">
-      <div class="viewer-header">
-        <h2>Embedded CV Preview</h2>
-        <a href="/files/juansanar_cv.pdf" target="_blank" class="btn btn-secondary btn-sm">Open in New Tab &nearr;</a>
+    <!-- Interactive CV Content Sections -->
+    <div class="cv-sections-container">
+      <!-- Education -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">🎓</span> Education
+        </h2>
+        <div class="cv-items-list">
+          {education.map((edu) => (
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div>
+                  <h3 class="cv-item-title">{edu.degree}</h3>
+                  <p class="cv-item-sub">{edu.institution} &bull; {edu.location}</p>
+                </div>
+                <span class="cv-period">{edu.period}</span>
+              </div>
+              <p class="cv-desc">{edu.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">💼</span> Work Experience
+        </h2>
+        <div class="cv-items-list">
+          {workExperience.map((job) => (
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div>
+                  <h3 class="cv-item-title">{job.title}</h3>
+                  <p class="cv-item-sub">{job.company} &bull; {job.location}</p>
+                </div>
+                <span class="cv-period">{job.period}</span>
+              </div>
+              <ul class="cv-bullets">
+                {job.bullets.map((b) => (
+                  <li>{b}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Research Experience -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">🔬</span> Research Experience
+        </h2>
+        <div class="cv-items-list">
+          {researchExperience.map((res) => (
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div>
+                  <h3 class="cv-item-title">{res.title}</h3>
+                  <p class="cv-item-sub">{res.institution} &bull; {res.location}</p>
+                </div>
+                <span class="cv-period">{res.period}</span>
+              </div>
+              <ul class="cv-bullets">
+                {res.bullets.map((b) => (
+                  <li>{b}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Clinical Experiences -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">🏥</span> Relevant Clinical Experiences
+        </h2>
+        <div class="cv-items-list">
+          {clinicalExperiences.map((clin) => (
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div>
+                  <h3 class="cv-item-title">{clin.title}</h3>
+                  <p class="cv-item-sub">{clin.institution} &bull; {clin.location}</p>
+                </div>
+                <span class="cv-period">{clin.period}</span>
+              </div>
+              <p class="cv-desc">{clin.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Teaching Experience -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">👨‍🏫</span> Medical Education & Teaching Experience
+        </h2>
+        <div class="cv-items-list">
+          {teachingExperience.map((tea) => (
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div>
+                  <h3 class="cv-item-title">{tea.title}</h3>
+                  <p class="cv-item-sub">{tea.institution} &bull; {tea.location}</p>
+                </div>
+                <span class="cv-period">{tea.period}</span>
+              </div>
+              <p class="course-name"><strong>{tea.course}</strong></p>
+              <p class="cv-desc">{tea.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Selected Awards -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">🏆</span> Selected Awards & Fellowships
+        </h2>
+        <div class="awards-grid">
+          {awards.map((a) => (
+            <div class="award-item">
+              <div class="award-main">
+                <span class="award-name">{a.award}</span>
+                <span class="award-org">{a.organization}</span>
+              </div>
+              <span class="award-period">{a.period}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Selected Publications -->
+      <section class="cv-section card">
+        <div class="section-header-flex">
+          <h2 class="section-title">
+            <span class="section-badge">📚</span> Selected Peer-Reviewed Publications
+          </h2>
+          <a
+            href="https://scholar.google.com/citations?user=7i_d-ZAAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary btn-sm"
+          >
+            Google Scholar ↗
+          </a>
+        </div>
+        <div class="publications-list">
+          {publications.map((p, idx) => (
+            <div class="publication-item">
+              <span class="pub-number">{idx + 1}.</span>
+              <div class="pub-content">
+                <p class="pub-authors">{p.authors}</p>
+                <p class="pub-title"><strong>{p.title}</strong></p>
+                <p class="pub-journal">
+                  <em>{p.journal}</em>. {p.year}. {p.publisher}.
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Professional Development & Affiliations -->
+      <div class="two-col-grid">
+        <section class="cv-section card">
+          <h2 class="section-title">
+            <span class="section-badge">💡</span> Professional Development
+          </h2>
+          <div class="dev-list">
+            {professionalDevelopment.map((pd) => (
+              <div class="dev-item">
+                <div>
+                  <div class="dev-name">{pd.item}</div>
+                  <div class="dev-inst">{pd.institution}</div>
+                </div>
+                <span class="dev-year">{pd.year}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="cv-section card">
+          <h2 class="section-title">
+            <span class="section-badge">🤝</span> Professional Affiliations
+          </h2>
+          <div class="dev-list">
+            {affiliations.map((af) => (
+              <div class="dev-item">
+                <div>
+                  <div class="dev-name">{af.organization}</div>
+                  <div class="dev-inst">{af.role}</div>
+                </div>
+                <span class="dev-year">{af.period}</span>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-      <div class="iframe-wrap">
-        <iframe
-          src="/files/juansanar_cv.pdf#toolbar=0"
-          title="Juan C. Sanchez-Arias CV"
-          class="pdf-frame"
-        >
-          <p>Your browser does not support inline PDF viewing. <a href="/files/juansanar_cv.pdf">Click here to download the PDF</a>.</p>
-        </iframe>
+
+      <!-- Leadership & Community -->
+      <section class="cv-section card">
+        <h2 class="section-title">
+          <span class="section-badge">🌱</span> Leadership & Community Engagement
+        </h2>
+        <div class="cv-items-list">
+          {leadership.map((lead) => (
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <div>
+                  <h3 class="cv-item-title">{lead.role}</h3>
+                  <p class="cv-item-sub">{lead.organization}</p>
+                </div>
+                <span class="cv-period">{lead.period}</span>
+              </div>
+              <p class="cv-desc">{lead.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Languages & Hobbies -->
+      <div class="two-col-grid">
+        <section class="cv-section card">
+          <h2 class="section-title">
+            <span class="section-badge">🌐</span> Languages
+          </h2>
+          <div class="badge-list">
+            <div class="skill-pill"><strong>Spanish:</strong> Native</div>
+            <div class="skill-pill"><strong>English:</strong> Fluent</div>
+          </div>
+        </section>
+
+        <section class="cv-section card">
+          <h2 class="section-title">
+            <span class="section-badge">⚡</span> Hobbies & Interests
+          </h2>
+          <div class="badge-list">
+            <div class="skill-pill">Strength conditioning</div>
+            <div class="skill-pill">Football</div>
+            <div class="skill-pill">Road cycling</div>
+            <div class="skill-pill">Hackathons</div>
+            <div class="skill-pill">FOSS Development</div>
+            <div class="skill-pill">AI-Driven Engineering</div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -91,7 +579,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .cv-page {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .page-title {
@@ -106,7 +594,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .download-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.25rem;
   }
 
@@ -140,47 +628,277 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .action-btn-group {
     margin-top: auto;
     display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  .viewer-section {
+  .cv-sections-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
+    gap: 2rem;
   }
 
-  .viewer-header {
+  .cv-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem;
+  }
+
+  .section-title {
+    margin: 0;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.75rem;
+  }
+
+  .section-badge {
+    font-size: 1.25rem;
+  }
+
+  .section-header-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.75rem;
   }
 
-  .viewer-header h2 {
-    margin: 0;
-    font-size: 1.25rem;
+  .section-header-flex .section-title {
     border-bottom: none;
     padding-bottom: 0;
   }
 
-  .iframe-wrap {
-    width: 100%;
-    height: 700px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background: var(--bg-surface-elevated);
-    border: 1px solid var(--border-subtle);
+  .cv-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .pdf-frame {
-    width: 100%;
-    height: 100%;
-    border: none;
+  .cv-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cv-item-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .cv-item-sub {
+    margin: 0.15rem 0 0 0;
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .cv-period {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .cv-desc {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .course-name {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+  }
+
+  .cv-bullets {
+    margin: 0.35rem 0 0 1.25rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  /* Awards */
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .award-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+  }
+
+  .award-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .award-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+  }
+
+  .award-org {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+  }
+
+  .award-period {
+    font-size: 0.825rem;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Publications */
+  .publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .publication-item {
+    display: flex;
+    gap: 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .pub-number {
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .pub-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .pub-authors {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .pub-title {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+
+  .pub-journal {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Two Column Grids */
+  .two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .dev-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .dev-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px dashed var(--border-subtle);
+  }
+
+  .dev-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .dev-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+  }
+
+  .dev-inst {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+  }
+
+  .dev-year {
+    font-size: 0.825rem;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-pill {
+    padding: 0.35rem 0.75rem;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
   }
 
   .btn-sm {
     padding: 0.35rem 0.75rem;
     font-size: 0.85rem;
+  }
+
+  @media (max-width: 640px) {
+    .cv-item-header {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .award-item {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
   }
 </style>
