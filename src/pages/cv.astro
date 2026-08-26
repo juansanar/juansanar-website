@@ -280,16 +280,16 @@ const publications = [
             <p>Comprehensive 3-page record of publications, clinical training, research, and awards.</p>
           </div>
           <div class="action-btn-group">
-            <a href="/files/juansanar_cv.pdf" download="Juan_Sanchez_Arias_CV.pdf" class="btn btn-primary">
+            <a href="/files/juansanar_cv.pdf" download="Juan_Sanchez_Arias_CV.pdf" class="btn btn-primary btn-action">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-              Download CV (PDF)
+              <span>Download PDF</span>
             </a>
-            <a href="/files/juansanar_cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              Open PDF ↗
+            <a href="/files/juansanar_cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-action-sm">
+              <span>Open ↗</span>
             </a>
           </div>
         </div>
@@ -306,16 +306,16 @@ const publications = [
             <p>Focused overview of Data Science, AI systems engineering, and technical leadership.</p>
           </div>
           <div class="action-btn-group">
-            <a href="/files/juansanar_resume.pdf" download="Juan_Sanchez_Arias_Resume.pdf" class="btn btn-secondary">
+            <a href="/files/juansanar_resume.pdf" download="Juan_Sanchez_Arias_Resume.pdf" class="btn btn-primary btn-action">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-              Download Resume (PDF)
+              <span>Download PDF</span>
             </a>
-            <a href="/files/juansanar_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              Open PDF ↗
+            <a href="/files/juansanar_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-action-sm">
+              <span>Open ↗</span>
             </a>
           </div>
         </div>
@@ -627,9 +627,33 @@ const publications = [
 
   .action-btn-group {
     margin-top: auto;
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .btn-action-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 600;
   }
 
   .cv-sections-container {
