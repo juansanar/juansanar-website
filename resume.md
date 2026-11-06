@@ -13,10 +13,10 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 
 ## CORE COMPETENCIES & TECHNICAL SKILLS
 
-- **AI & LLM Systems:** Generative AI, Prompt Engineering, RAG Frameworks, LLM Evaluation & Benchmarking, Knowledge Graphs, Biomedical NLP.
-- **Programming & Data:** Python (pandas, NumPy, scikit-learn, PyTorch/HuggingFace), R (tidyverse, Bioconductor), SQL (PostgreSQL, BigQuery), Bash, Git.
+- **AI & LLM Systems:** Generative AI, Agentic AI & MCP (Model Context Protocol), Prompt Engineering, RAG Frameworks, LLM Evaluation & Benchmarking, Knowledge Graphs, Biomedical NLP.
+- **Programming & Data:** Python (pandas, NumPy, scikit-learn, PyTorch/HuggingFace), R (tidyverse, Bioconductor), SQL (PostgreSQL, BigQuery), REST APIs, Bash, Git.
 - **Life Sciences Domain:** Preclinical Drug Discovery, Clinical Medicine, Target Validation, Bio-Ontologies, Live-Cell Bio-Image Processing (ImageJ/Fiji), Computational Biology.
-- **Product & Leadership:** Product Ownership (CSPO), Cross-Functional Team Leadership, Agile/Scrum, Stakeholder Management, Scientific Due Diligence, GCP, Docker.
+- **Product & Leadership:** Technical Product Ownership, Scientific Publisher Compliance & Data Governance, Cross-Functional Team Leadership, Agile/Scrum, Stakeholder Management, GCP, Docker.
 
 ---
 
@@ -27,12 +27,13 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 
 #### **Data Scientist** | *Jun 2026 – Present*
 - Architect production-grade Generative AI, RAG, and agentic workflows to extract, synthesize, and contextualize high-dimensional preclinical and therapeutics data for top global pharmaceutical clients.
-- Develop automated LLM benchmarking and evaluation pipelines to ensure high scientific accuracy, hallucination mitigation, and strict domain compliance across complex oncology and neuroscience indications.
-- Scale biomedical knowledge graph coverage and improve semantic vector search retrieval across millions of research papers, patents, and customer internal experimental records.
+- Expand BenchSci’s product ecosystem via programmatic access and agentic integrations, contributing to **Model Context Protocol (MCP)** tooling and high-throughput API services for preclinical discovery workflows.
+- Lead technical assessments and governance audits across BenchSci data services and pipelines to ensure strict compliance with **scientific publisher requirements**, licensing agreements, and content usage standards.
+- Develop automated LLM benchmarking and evaluation pipelines to ensure high scientific accuracy and hallucination mitigation, scaling biomedical knowledge graph coverage across millions of research papers, patents, and internal experimental records.
 
 #### **Science Tech Lead & Team Lead** | *Jun 2023 – May 2026*
 - Managed and mentored a cross-functional team of PhD scientists and data specialists responsible for ingesting, validating, and structuring proprietary enterprise pharmaceutical datasets.
-- Served as **Product Owner (CSPO)** for the Customer Internal Data E2E processing pipeline, dramatically accelerating ingestion velocity and client time-to-value.
+- Served as **Product Owner** for the Customer Internal Data E2E processing pipeline, dramatically accelerating ingestion velocity and client time-to-value.
 - Led the R&D and deployment of Generative AI applications to extract, summarize, and structure unstructured experimental records in Electronic Lab Notebooks (ELNs) and IP documents.
 - Acted as subject matter expert for Neuroscience and Oncology therapeutic areas, shaping platform roadmap with executive stakeholders and technical product managers.
 
@@ -73,7 +74,6 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 
 - **Certified Google Generative AI Leader** — Google Cloud (2025)
 - **Google Data Analytics Professional Specialization** — Google Cloud / Coursera (2026)
-- **Certified Scrum Product Owner (CSPO - 1920762)** — Scrum Alliance (2024)
 - **Genetic Epidemiology & Epigenetics** — Universidad del Valle (2022)
 - **Code in Place (Python Engineering)** — Stanford University (2021)
 
