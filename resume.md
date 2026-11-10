@@ -14,7 +14,7 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 ## CORE COMPETENCIES & TECHNICAL SKILLS
 
 - **AI & LLM Systems:** Generative AI, Agentic AI & MCP (Model Context Protocol), Prompt Engineering, RAG Frameworks, LLM Evaluation & Benchmarking, Knowledge Graphs, Biomedical NLP.
-- **Programming & Data:** Python (pandas, NumPy, scikit-learn, PyTorch/HuggingFace), R (tidyverse, Bioconductor), SQL (PostgreSQL, BigQuery), REST APIs, Bash, Git.
+- **Programming & Data:** Python (pandas, NumPy, scikit-learn, PyTorch/HuggingFace), R (tidyverse, Bioconductor: DESeq2, limma, oligo), SQL (PostgreSQL, BigQuery), REST APIs, Bash, Git.
 - **Life Sciences Domain:** Preclinical Drug Discovery, Clinical Medicine, Target Validation, Bio-Ontologies, Live-Cell Bio-Image Processing (ImageJ/Fiji), Computational Biology.
 - **Product & Leadership:** Technical Product Ownership, Scientific Publisher Compliance & Data Governance, Cross-Functional Team Leadership, Agile/Scrum, Stakeholder Management, GCP, Docker.
 
@@ -47,7 +47,8 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 
 #### **Postdoctoral Research Fellow (Health Research BC Fellow)** | *Nov 2020 – Apr 2022*
 - Recipient of the **Michael Smith Health Research BC Trainee Award** investigating cardiac arrhythmia and neurodevelopmental channelopathies (*ANK2* p.S646F) in BC Indigenous communities.
-- Bridged preclinical genetics, live-cell fluorescence microscopy (calcium & voltage dynamics), and computational modeling with patient ECG data to provide clinical diagnostic insights.
+- Performed bulk RNA-seq and microarray differential gene expression analysis in **R / Bioconductor** (`DESeq2`, `limma`, `oligo`), alongside protein-protein interaction (PPI) network and pathway enrichment analyses (`R`, `Cytoscape`) to uncover mechanisms of cardiomyocyte calcium homeostasis.
+- Executed immunohistochemistry and confocal fluorescence microscopy of embryonic and adult mouse heart sections, bridging preclinical genetics with clinical diagnostic insights.
 
 #### **Graduate Research Assistant (Ph.D. Candidate)** | *Sep 2015 – Aug 2020*
 - Built custom Python and ImageJ bio-image analysis pipelines for automated quantification of 3D dendritic spine morphology and synaptic plasticity in cortical neurons.
@@ -72,8 +73,9 @@ Physician-Scientist, Data Scientist, and Google-Certified Generative AI Leader w
 
 ## CERTIFICATIONS & PROFESSIONAL TRAINING
 
-- **Certified Google Generative AI Leader** — Google Cloud (2025)
+- **Basic Life Support (BLS) - HCP, Airway Management, and Oxygen Therapy** — Canadian Red Cross (Oct 2026)
 - **Google Data Analytics Professional Specialization** — Google Cloud / Coursera (2026)
+- **Certified Google Generative AI Leader** — Google Cloud (2025)
 - **Genetic Epidemiology & Epigenetics** — Universidad del Valle (2022)
 - **Code in Place (Python Engineering)** — Stanford University (2021)
 
